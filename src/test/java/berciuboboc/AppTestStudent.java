@@ -20,7 +20,7 @@ public class AppTestStudent
     }
 
     @Test
-    public void addStudent_TC1() {
+    public void TC1_AddStudent() {
         validation.Validator<domain.Student> studentValidator = new validation.StudentValidator();
         validation.Validator<domain.Tema> temaValidator = new validation.TemaValidator();
         validation.Validator<domain.Nota> notaValidator = new validation.NotaValidator();
