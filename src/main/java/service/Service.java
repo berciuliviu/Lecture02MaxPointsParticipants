@@ -25,6 +25,7 @@ public class Service {
     public Iterable<Nota> findAllNote() { return notaXmlRepo.findAll(); }
 
     public int saveStudent(String id, String nume, int grupa) {
+        if (id == null || nume == null) throw new NullPointerException();
         Student student = new Student(id, nume, grupa);
         Student result = studentXmlRepo.save(student);
 
@@ -35,7 +36,9 @@ public class Service {
     }
 
     public int saveTema(String id, String descriere, int deadline, int startline) {
+        if (id == null) throw new NullPointerException();
         Tema tema = new Tema(id, descriere, deadline, startline);
+
         Tema result = temaXmlRepo.save(tema);
 
         if (result == null) {

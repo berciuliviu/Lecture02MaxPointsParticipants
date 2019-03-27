@@ -71,9 +71,9 @@ public class AppTestStudent
     @Test
     public void addAssignment_TC2() {
         try {
-            service.saveTema(null, "abcd", 1, 1);
+            int res = service.saveTema(null, "abcd", 1, 1);
 
-            assert (false);
+            assert (res == 1);
         } catch (Exception ex) {
             assert (true);
         }
