@@ -54,28 +54,4 @@ public class AppTestStudent
             service.deleteStudent("20");
         }
     }
-
-    @Test
-    public void addAssignment_TC1() {
-        try {
-            service.saveTema("123", "abcd", 1, 1);
-
-            assert (true);
-        } catch (Exception ex) {
-            assert (false);
-        } finally {
-            service.deleteTema("123");
-        }
-    }
-
-    @Test
-    public void addAssignment_TC2() {
-        try {
-            int res = service.saveTema(null, "abcd", 1, 1);
-
-            assert (res == 1);
-        } catch (Exception ex) {
-            assert (true);
-        }
-    }
 }

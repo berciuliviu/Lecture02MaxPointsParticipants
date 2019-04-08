@@ -30,13 +30,13 @@ public class Service {
         Student result = studentXmlRepo.save(student);
 
         if (result == null) {
-            return 1;
+            return 0;
         }
-        return 0;
+        return 1;
     }
 
     public int saveTema(String id, String descriere, int deadline, int startline) {
-        if (id == null) throw new NullPointerException();
+        if (id == null || id == "") throw new NullPointerException();
         Tema tema = new Tema(id, descriere, deadline, startline);
 
         Tema result = temaXmlRepo.save(tema);
