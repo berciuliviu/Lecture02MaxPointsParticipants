@@ -32,9 +32,9 @@ public class TestTema {
             int res = service.saveTema("1", "abcd", 1, 1);
             res = service.saveTema("1", "abcd", 1, 1);
 
-            assert (res == 0);
-        } catch (Exception ex) {
             assert (true);
+        } catch (Exception ex) {
+            assert (false);
         } finally{
             service.deleteTema("1");
         }
