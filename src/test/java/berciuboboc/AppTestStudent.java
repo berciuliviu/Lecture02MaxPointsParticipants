@@ -35,7 +35,7 @@ public class AppTestStudent
             service.saveStudent("20", "Emanuel", 221);
 
             assert (true);
-        } catch (Exception ex) {
+        } catch (Exception | AssertionError ex) {
             assert (false);
         } finally {
             service.deleteStudent("20");
@@ -48,7 +48,7 @@ public class AppTestStudent
             service.saveStudent("20", null, 221);
 
             assert (false);
-        } catch (Exception ex) {
+        } catch (Exception | AssertionError ex) {
             assert (true);
         } finally {
             service.deleteStudent("20");
@@ -74,7 +74,7 @@ public class AppTestStudent
             service.saveStudent("20", "NELSON", -1);
 
             assert (false);
-        } catch (Exception ex) {
+        } catch (Exception | AssertionError ex) {
             assert (true);
         } finally {
             service.deleteStudent("20");
@@ -100,7 +100,7 @@ public class AppTestStudent
             service.saveStudent("20", "", 921);
 
             assert (false);
-        } catch (Exception ex) {
+        } catch (Exception | AssertionError ex) {
             assert (true);
         } finally {
             service.deleteStudent("20");
@@ -113,7 +113,7 @@ public class AppTestStudent
             service.saveStudent("20", null, 0);
 
             assert (false);
-        } catch (Exception ex) {
+        } catch (Exception | AssertionError ex) {
             assert (true);
         } finally {
             service.deleteStudent("20");
@@ -126,7 +126,7 @@ public class AppTestStudent
             service.saveStudent("20", "NELSOOOOON", 931);
 
             assert (false);
-        } catch (Exception ex) {
+        } catch (Exception | AssertionError ex) {
             assert (true);
         } finally {
             service.deleteStudent("20");
@@ -140,7 +140,7 @@ public class AppTestStudent
             service.saveStudent("20", "Nelson Mondial", 921);
 
             assert (false);
-        } catch (Exception ex) {
+        } catch (Exception | AssertionError ex) {
             assert (true);
         } finally {
             service.deleteStudent("20");

@@ -19,7 +19,7 @@ public class TestTema {
             service.saveTema("", "abcd", 3, 1);
 
             assert (false);
-        } catch (Exception ex) {
+        } catch (Exception | AssertionError ex) {
             assert (true);
         } finally {
            // service.deleteTema("123");
@@ -33,7 +33,7 @@ public class TestTema {
             res = service.saveTema("1", "abcd", 1, 1);
 
             assert (true);
-        } catch (Exception ex) {
+        } catch (Exception | AssertionError ex) {
             assert (false);
         } finally{
             service.deleteTema("1");
@@ -59,7 +59,7 @@ public class TestTema {
             int res = service.saveTema("2", "", 1, 1);
 
             assert (false);
-        } catch (Exception ex) {
+        } catch (Exception | AssertionError ex) {
             assert (true);
         } finally {
             service.deleteTema("2");
@@ -73,7 +73,7 @@ public class TestTema {
             int res = service.saveTema("2", null, 1, 1);
 
             assert (false);
-        } catch (Exception ex) {
+        } catch (Exception | AssertionError ex) {
             assert (true);
         } finally {
             service.deleteTema("2");
@@ -86,7 +86,7 @@ public class TestTema {
             int res = service.saveTema("", "abdefe", 1, 1);
 
             assert (false);
-        } catch (Exception ex) {
+        } catch (Exception | AssertionError ex) {
             assert (true);
         } finally {
             service.deleteTema("2");
@@ -99,7 +99,7 @@ public class TestTema {
             int res = service.saveTema("2", "12gfdgsd", -2000, 1);
 
             assert (false);
-        } catch (Exception ex) {
+        } catch (Exception | AssertionError ex) {
             assert (true);
         } finally {
             service.deleteTema("2");
@@ -113,7 +113,7 @@ public class TestTema {
             int res = service.saveTema("2", "gdsdas", 2000, -2000);
 
             assert (false);
-        } catch (Exception ex) {
+        } catch (Exception | AssertionError ex) {
             assert (true);
         } finally {
             service.deleteTema("2");
