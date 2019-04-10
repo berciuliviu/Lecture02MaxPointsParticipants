@@ -65,7 +65,7 @@ public class TestIntegration {
             assert (false);
         } finally {
              service.deleteTema("20");
-             service.deleteTema("20");
+             service.deleteStudent("20");
         }
     }
 }
