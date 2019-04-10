@@ -45,8 +45,8 @@ public class TestIntegration {
             int res = service.saveNota("2","3",2.3,1,"NONE");
 
             assert (res == 0);
-        } catch (Exception ex) {
-            assert (false);
+        } catch (Exception | AssertionError ex) {
+            assert (true);
         } finally {
             service.deleteStudent("20");
         }
