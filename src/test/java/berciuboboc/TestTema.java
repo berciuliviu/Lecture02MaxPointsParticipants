@@ -52,4 +52,71 @@ public class TestTema {
             service.deleteTema("2");
         }
     }
+
+    @Test
+    public void addAssignment_TC4() {
+        try {
+            int res = service.saveTema("2", "", 1, 1);
+
+            assert (false);
+        } catch (Exception ex) {
+            assert (true);
+        } finally {
+            service.deleteTema("2");
+        }
+    }
+
+
+    @Test
+    public void addAssignment_TC5() {
+        try {
+            int res = service.saveTema("2", null, 1, 1);
+
+            assert (false);
+        } catch (Exception ex) {
+            assert (true);
+        } finally {
+            service.deleteTema("2");
+        }
+    }
+
+    @Test
+    public void addAssignment_TC6() {
+        try {
+            int res = service.saveTema("", "abdefe", 1, 1);
+
+            assert (false);
+        } catch (Exception ex) {
+            assert (true);
+        } finally {
+            service.deleteTema("2");
+        }
+    }
+
+    @Test
+    public void addAssignment_TC7() {
+        try {
+            int res = service.saveTema("2", "12gfdgsd", -2000, 1);
+
+            assert (false);
+        } catch (Exception ex) {
+            assert (true);
+        } finally {
+            service.deleteTema("2");
+        }
+    }
+
+
+    @Test
+    public void addAssignment_TC8() {
+        try {
+            int res = service.saveTema("2", "gdsdas", 2000, -2000);
+
+            assert (false);
+        } catch (Exception ex) {
+            assert (true);
+        } finally {
+            service.deleteTema("2");
+        }
+    }
 }

@@ -54,4 +54,97 @@ public class AppTestStudent
             service.deleteStudent("20");
         }
     }
+
+    @Test
+    public void addStudent_TC3() {
+        try {
+            service.saveStudent("", "NELSON", 221);
+
+            assert (false);
+        } catch (Exception ex) {
+            assert (true);
+        } finally {
+            service.deleteStudent("20");
+        }
+    }
+
+    @Test
+    public void addStudent_TC4() {
+        try {
+            service.saveStudent("20", "NELSON", -1);
+
+            assert (false);
+        } catch (Exception ex) {
+            assert (true);
+        } finally {
+            service.deleteStudent("20");
+        }
+    }
+
+    @Test
+    public void addStudent_TC5() {
+        try {
+            service.saveStudent("20", "NELSON", 0);
+
+            assert (false);
+        } catch (Exception ex) {
+            assert (true);
+        } finally {
+            service.deleteStudent("20");
+        }
+    }
+
+    @Test
+    public void addStudent_TC6() {
+        try {
+            service.saveStudent("20", "", 921);
+
+            assert (false);
+        } catch (Exception ex) {
+            assert (true);
+        } finally {
+            service.deleteStudent("20");
+        }
+    }
+
+    @Test
+    public void addStudent_TC7() {
+        try {
+            service.saveStudent("20", null, 0);
+
+            assert (false);
+        } catch (Exception ex) {
+            assert (true);
+        } finally {
+            service.deleteStudent("20");
+        }
+    }
+
+    @Test
+    public void addStudent_TC8() {
+        try {
+            service.saveStudent("20", "NELSOOOOON", 931);
+
+            assert (false);
+        } catch (Exception ex) {
+            assert (true);
+        } finally {
+            service.deleteStudent("20");
+        }
+    }
+
+    @Test
+    public void addStudent_TC9() {
+        try {
+            service.saveStudent("20", "NELSOOOOON", 931);
+            service.saveStudent("20", "Nelson Mondial", 921);
+
+            assert (false);
+        } catch (Exception ex) {
+            assert (true);
+        } finally {
+            service.deleteStudent("20");
+        }
+    }
+
 }
