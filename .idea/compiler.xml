@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="931" />
-        <module name="lab2" />
         <module name="Lecture02MaxPointsParticipants" />
+        <module name="lab2" />
+        <module name="931" />
       </profile>
     </annotationProcessing>
   </component>

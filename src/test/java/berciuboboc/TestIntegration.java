@@ -68,4 +68,55 @@ public class TestIntegration {
              service.deleteStudent("20");
         }
     }
+
+
+    // Test case for addStudent
+    @Test
+    public void TestCase_AddStudent() {
+        try {
+            service.saveStudent("20", "Emanuel", 221);
+
+            assert (true);
+        } catch (Exception ex) {
+            assert (false);
+        } finally {
+            service.deleteStudent("20");
+        }
+    }
+
+    // integration test for addAssignment (addStudent+addAssignment)
+    @Test
+    public void integrationTest_AddAssignment()
+    {
+        try {
+            service.saveStudent("20", "Emanuel", 221);
+            service.saveTema("20", "abcd", 3, 1);
+
+            assert (true);
+        } catch (Exception ex) {
+            assert (false);
+        } finally {
+            service.deleteTema("20");
+            service.deleteStudent("20");
+        }
+    }
+
+    // integration test for addGrade (addStudent+addAssignment+addGrade)
+    @Test
+    public void integrationTest_AddGrade()
+    {
+        try {
+            service.saveStudent("20", "Emanuel", 221);
+            service.saveTema("20", "abcd", 3, 1);
+            int res = service.saveNota("20","20",2.3,1,"NONE");
+
+            assert (true);
+        } catch (Exception ex) {
+            assert (false);
+        } finally {
+            service.deleteTema("20");
+            service.deleteStudent("20");
+        }
+    }
+
 }
